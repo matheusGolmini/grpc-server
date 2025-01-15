@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package example.car;
+
+import "../shared/common.proto";
+import "google/protobuf/empty.proto";
+
+// Serviço CRUD de usuários
+service CarService {
+  rpc CreateCar (Car) returns (Car);
+  rpc GetCar (CarId) returns (Car);
+  rpc ListCars (google.protobuf.Empty) returns (stream Car);
+  rpc UpdateCar (Car) returns (Car);
+  rpc DeleteCar (CarId) returns (google.protobuf.Empty);
+}
+
+// Mensagens
+message Car {
+  string id = 1;
+  string name = 2;
+  example.shared.AuditInfo auditInfo = 4;
+}
+
+message CarId {
+  string id = 1;
+}

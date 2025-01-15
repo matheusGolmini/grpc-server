@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",                // Versão do JavaScript de saída
+    "module": "commonjs",             // Sistema de módulos (Node.js usa CommonJS)
+    "strict": true,                   // Ativa verificações estritas
+    "esModuleInterop": true,          // Suporte para importação de módulos CommonJS
+    "outDir": "./dist",               // Diretório de saída para arquivos compilados
+    "rootDir": "./src",               // Diretório de entrada para o código-fonte
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+  },
+  "include": ["src"],                 // Inclui os arquivos na pasta src
+  "exclude": ["node_modules"]         // Exclui os arquivos na pasta node_modules
+}
